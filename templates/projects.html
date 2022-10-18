@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+
+{% block title %}
+    {% trans 'Проекты' %}
+{% endblock %}
+
+
+{% block content %}
+    <a class="return" href="{% url 'main_page' %}">
+        <div class="arrow-6">
+            <svg width="18px" height="17px" viewBox="0 0 18 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g transform="translate(8.500000, 8.500000) scale(-1, 1) translate(-8.500000, -8.500000)">
+                    <polygon class="arrow-6-pl" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <polygon class="arrow-6-pl-fixed" points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"></polygon>
+                    <path d="M-1.48029737e-15,0.56157424 L-1.48029737e-15,16.1929159 L9.708,8.33860465 L-2.66453526e-15,0.56157424 L-1.48029737e-15,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>
+                </g>
+            </svg>
+        </div>
+    </a>
+    <div class="projects_block">
+        Проекты
+        <div class="projects">
+            <details open class="project_one">
+                <summary class="project_title">Сайты</summary>
+                <div class="project_content" >
+                    <div class="p_img">
+                        <b>Блог с функцией "симуляции жизни"</b>
+                        <br>
+                        {% include 'img_carousels/img_carousel_blog.html' %}
+                    </div>
+                    <div class="p_desc">
+                        description
+                        <br><br>
+                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                    </div>
+                    <div class="p_other">features</div>
+                </div>
+
+                <div class="project_content" >
+                    <div class="p_img">
+                        <b>Сайт копилка с возможностью создавать совместные цели</b>
+                        <br><br>
+                        {% include 'img_carousels/img_carousel_goals.html' %}
+                    </div>
+                    <div class="p_desc">
+                        description
+                        <br><br>
+                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                    </div>
+                    <div class="p_other">features</div>
+                </div>
+            </details>
+
+            <details open class="project_one">
+                <summary class="project_title">Боты</summary>
+                <div class="project_content" >
+                    <div class="p_img">
+                        <b>Телеграмм бот для копилки "PurposesKeeper"</b>
+                        <br><br>
+                        {% include 'img_carousels/img_carousel_goals_bot.html' %}
+                    </div>
+                    <div class="p_desc">
+                        description
+                        <br><br>
+                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                    </div>
+                    <div class="p_other">features</div>
+                </div>
+
+                <div class="project_content" >
+                    <div class="p_img">
+                        <b>Чат-бот VK для кондитерской витрины</b>
+                        <br><br>
+                        {% include 'img_carousels/img_carousel_vk_bot.html' %}
+                    </div>
+                    <div class="p_desc">
+                        description
+                        <br><br>
+                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                    </div>
+                    <div class="p_other">features</div>
+                </div>
+
+                <div class="project_content" >
+                    <div class="p_img">
+                        <b>Телеграм бот для поиска получения предложений о работе</b>
+                        <br><br>
+                        {% include 'img_carousels/img_carousel_job_bot.html' %}
+                    </div>
+                    <div class="p_desc">
+                        description
+                        <br><br>
+                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                    </div>
+                    <div class="p_other">features</div>
+                </div>
+            </details>
+
+            <details open class="project_one">
+                <summary class="project_title">Другое</summary>
+                <div class="project_content" >
+                    <div class="p_img">
+                        <b>Проверка анаграммы</b>
+                        <br><br>
+                        {% include 'img_carousels/img_carousel_anagram.html' %}
+                    </div>
+                    <div class="p_desc">
+                        description
+                        <br><br>
+                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                    </div>
+                    <div class="p_other">features</div>
+                </div>
+            </details>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+
+{% block title %}
+    {% trans 'Главная' %}
+{% endblock %}
+
+
+{% block content %}
+    <div class="content">
+        <a class="main_section_a" id="main_history" href="{% url 'experience' %}">
+            <div class="main_section">
+                опыт
+            </div>
+        </a>
+        <a class="main_section_a" id="main_skills" href="{% url 'skills' %}">
+            <div class="main_section">
+                навыки
+            </div>
+        </a>
+        <a class="main_section_a" id="main_projects" href="{% url 'projects' %}">
+            <div class="main_section">
+                проекты
+            </div>
+        </a>
+
+        <div class="main_contacts">
+            <div class="contacts_title">контактная информация</div>
+            <div class="contacts_content">
+                <div class="contacts_content_title">контактная информация</div>
+                <div class="contacts_block">
+                    <div class="contacts_item">
+                        <img class="contacts_img" src="{% static 'contacts/telegram1.png' %}">
+                        <a href="https://t.me/Dreamis">@Dreamis</a>
+                    </div>
+                    <br><br>
+                    <div class="contacts_item">
+                        <img class="contacts_img" src="{% static 'contacts/email1.png' %}">
+                        alexmdream@gmail.com
+                    </div>
+<!--                    <details class="email_detail">-->
+<!--                            <summary class="cfi_title"></summary>-->
+<!--                            <form></form>-->
+<!--                    </details>-->
+
+                </div>
+
+                <div class="contacts_block">
+                    <div class="contacts_item">
+                        <img class="contacts_img" src="{% static 'contacts/github1.png' %}">
+                        <a href="https://github.com/AwesomeDreamis">GitHub: AwesomeDreamis</a>
+                    </div>
+                    <br><br>
+                    <div class="contacts_item">
+                        <img class="contacts_img" src="{% static 'contacts/habr1.png' %}">
+                        <a href="https://career.habr.com/dreamis">Хабр Карьера: dreamis</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

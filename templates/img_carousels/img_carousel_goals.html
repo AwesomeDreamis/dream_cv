@@ -1,0 +1,71 @@
+<style type="text/css">
+    input[type=radio] {
+      display: none;
+    }
+
+    .card_goals {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin-left: 12%;
+      transition: transform .4s ease;
+      cursor: pointer;
+    }
+
+    .project_img_container_goals {
+      width: 100%;
+      height: 300px;
+    }
+
+    .cards_goals {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card_goals img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    #item-1_goals:checked ~ .cards_goals #song-3_goals, #item-2_goals:checked ~ .cards_goals #song-1_goals, #item-3_goals:checked ~ .cards_goals #song-2_goals
+    {
+      transform: translatex(-30%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1_goals:checked ~ .cards_goals #song-2_goals, #item-2_goals:checked ~ .cards_goals #song-3_goals, #item-3_goals:checked ~ .cards_goals #song-1_goals {
+      transform: translatex(30%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1_goals:checked ~ .cards_goals #song-1_goals, #item-2_goals:checked ~ .cards_goals #song-2_goals, #item-3_goals:checked ~ .cards_goals #song-3_goals {
+      transform: translatex(0) scale(1);
+      opacity: 1;
+      z-index: 1;
+    }
+</style>
+
+<div class="project_img_container_goals">
+    <input type="radio" name="slider1" id="item-1_goals" checked>
+    <input type="radio" name="slider1" id="item-2_goals">
+    <input type="radio" name="slider1" id="item-3_goals">
+
+    <div class="cards_goals">
+        <label class="card_goals" for="item-1_goals" id="song-1_goals">
+            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80">
+        </label>
+        <label class="card_goals" for="item-2_goals" id="song-2_goals">
+            <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+        </label>
+        <label class="card_goals" for="item-3_goals" id="song-3_goals">
+            <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+        </label>
+    </div>
+</div>

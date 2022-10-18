@@ -1,0 +1,71 @@
+<style type="text/css">
+    input[type=radio] {
+      display: none;
+    }
+
+    .card_goals_bot {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin-left: 12%;
+      transition: transform .4s ease;
+      cursor: pointer;
+    }
+
+    .project_img_container_goals_bot {
+      width: 100%;
+      height: 300px;
+    }
+
+    .cards_goals_bot {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card_goals_bot img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    #item-1_goals_bot:checked ~ .cards_goals_bot #song-3_goals_bot, #item-2_goals_bot:checked ~ .cards_goals_bot #song-1_goals_bot, #item-3_goals_bot:checked ~ .cards_goals_bot #song-2_goals_bot
+    {
+      transform: translatex(-30%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1_goals_bot:checked ~ .cards_goals_bot #song-2_goals_bot, #item-2_goals_bot:checked ~ .cards_goals_bot #song-3_goals_bot, #item-3_goals_bot:checked ~ .cards_goals_bot #song-1_goals_bot {
+      transform: translatex(30%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1_goals_bot:checked ~ .cards_goals_bot #song-1_goals_bot, #item-2_goals_bot:checked ~ .cards_goals_bot #song-2_goals_bot, #item-3_goals_bot:checked ~ .cards_goals_bot #song-3_goals_bot {
+      transform: translatex(0) scale(1);
+      opacity: 1;
+      z-index: 1;
+    }
+</style>
+
+<div class="project_img_container_goals_bot">
+    <input type="radio" name="slider1_goals_bot" id="item-1_goals_bot" checked>
+    <input type="radio" name="slider1_goals_bot" id="item-2_goals_bot">
+    <input type="radio" name="slider1_goals_bot" id="item-3_goals_bot">
+
+    <div class="cards_goals_bot">
+        <label class="card_goals_bot" for="item-1_goals_bot" id="song-1_goals_bot">
+            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80">
+        </label>
+        <label class="card_goals_bot" for="item-2_goals_bot" id="song-2_goals_bot">
+            <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+        </label>
+        <label class="card_goals_bot" for="item-3_goals_bot" id="song-3_goals_bot">
+            <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+        </label>
+    </div>
+</div>

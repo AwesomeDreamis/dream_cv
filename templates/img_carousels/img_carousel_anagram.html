@@ -1,0 +1,71 @@
+<style type="text/css">
+    input[type=radio] {
+      display: none;
+    }
+
+    .card_anagram {
+      position: absolute;
+      width: 60%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin-left: 12%;
+      transition: transform .4s ease;
+      cursor: pointer;
+    }
+
+    .project_img_container_anagram {
+      width: 100%;
+      height: 300px;
+    }
+
+    .cards_anagram {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card_anagram img {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    #item-1_anagram:checked ~ .cards_anagram #song-3_anagram, #item-2_anagram:checked ~ .cards_anagram #song-1_anagram, #item-3_anagram:checked ~ .cards_anagram #song-2_anagram
+    {
+      transform: translatex(-30%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1_anagram:checked ~ .cards_anagram #song-2_anagram, #item-2_anagram:checked ~ .cards_anagram #song-3_anagram, #item-3_anagram:checked ~ .cards_anagram #song-1_anagram {
+      transform: translatex(30%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1_anagram:checked ~ .cards_anagram #song-1_anagram, #item-2_anagram:checked ~ .cards_anagram #song-2_anagram, #item-3_anagram:checked ~ .cards_anagram #song-3_anagram {
+      transform: translatex(0) scale(1);
+      opacity: 1;
+      z-index: 1;
+    }
+</style>
+
+<div class="project_img_container_anagram">
+    <input type="radio" name="slider_anagram" id="item-1_anagram" checked>
+    <input type="radio" name="slider_anagram" id="item-2_anagram">
+    <input type="radio" name="slider_anagram" id="item-3_anagram">
+
+    <div class="cards_anagram">
+        <label class="card_anagram" for="item-1_anagram" id="song-1_anagram">
+            <img src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80">
+        </label>
+        <label class="card_anagram" for="item-2_anagram" id="song-2_anagram">
+            <img src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80">
+        </label>
+        <label class="card_anagram" for="item-3_anagram" id="song-3_anagram">
+            <img src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60">
+        </label>
+    </div>
+</div>

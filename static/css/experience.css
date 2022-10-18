@@ -1,0 +1,54 @@
+.experience_block {
+    display: block;
+    color: #fdfd01;
+    background: repeating-linear-gradient(60deg, #3a3730, #3a3730 2px, #36342d 2px, #36342d 6px);
+    height: 98vh;
+    width: 100%;
+    font-size: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.experience{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    width: 45%;
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+#about_me {
+    text-align: right;
+}
+
+.experience ul {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.experience li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.exp_pointer {
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.exp_content_date {
+    font-size: 14px;
+    rotate: 270deg;
+    color: #fdfd01;
+}
+
+.exp_text {
+    display: inline-block;
+    text-align: left;
+}
