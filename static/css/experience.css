@@ -2,7 +2,8 @@
     display: block;
     color: #fdfd01;
     background: repeating-linear-gradient(60deg, #3a3730, #3a3730 2px, #36342d 2px, #36342d 6px);
-    height: 98vh;
+    min-height: 98vh;
+    height: 100%;
     width: 100%;
     font-size: 20px;
     padding-top: 20px;
@@ -15,13 +16,28 @@
     vertical-align: top;
     width: 45%;
     padding: 20px;
+    max-width: 700px;
     text-align: left;
     color: white;
 }
 
 #about_me {
     text-align: right;
+    padding-right: 50px;
 }
+
+.about_me_img {
+    width: 80%;
+    border: 3px solid #fdfd01;
+    border-radius: 50%
+}
+
+.about_arrow {
+    rotate: 290deg;
+    width: 40px;
+    filter: grayscale(1) brightness(1000%);
+}
+
 
 .experience ul {
     text-decoration: none;
@@ -34,6 +50,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    margin-bottom: 20px;
 }
 
 .exp_pointer {
@@ -49,6 +66,9 @@
 }
 
 .exp_text {
+    margin-left: 10px;
+    width: 80%;
     display: inline-block;
     text-align: left;
+    vertical-align: top;
 }

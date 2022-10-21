@@ -21,81 +21,160 @@
         </div>
     </a>
     <div class="projects_block">
-        Проекты
+        Примеры работ
         <div class="projects">
             <details open class="project_one">
                 <summary class="project_title">Сайты</summary>
-                <div class="project_content" >
+                <div class="project_content" style="border-bottom: 2px solid #424242;">
                     <div class="p_img">
                         <b>Блог с функцией "симуляции жизни"</b>
-                        <br>
+                        <br><br>
                         {% include 'img_carousels/img_carousel_blog.html' %}
                     </div>
                     <div class="p_desc">
-                        description
+                        <span style="color: #fdfd01">Описание</span>
                         <br><br>
-                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                        Блог, реализованный на Django.<br>
+                        Публикация постов, редактирование профиля, оставление комментариев,
+                        подписки, лайки, сохранения, загрузка изображений.<br>
+                        Включает в себя функцию "симуляции жизни",
+                        в данный момент реализованную через взаимодействие с YouTubeAPI.
                     </div>
-                    <div class="p_other">features</div>
+                    <div class="p_other">
+                        <span style="color: #fdfd01">Технологии</span><br><br>
+                        <ul>
+                            <li>Django</li>
+                            <li>Django Rest Framework</li>
+                            <li>PostgreSQL</li>
+                            <li>Docker, Docker compose</li>
+                            <li>command for manage.py</li>
+                            <li>Swagger</li>
+                            <li>Unit tests</li>
+                            <li>API requests</li>
+                        </ul>
+                        <br>Позже:
+                        <ul>
+                            <li>переделать unit тесты</li>
+                            <li>Добавить чат на Redis channels</li>
+                        </ul>
+                        <br>
+                        <a href="https://github.com/AwesomeDreamis/ai_blog"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">ai_blog</a>
+                    </div>
                 </div>
 
                 <div class="project_content" >
                     <div class="p_img">
-                        <b>Сайт копилка с возможностью создавать совместные цели</b>
+                        <b>Сайт-копилка с возможностью создавать совместные цели</b>
                         <br><br>
                         {% include 'img_carousels/img_carousel_goals.html' %}
                     </div>
                     <div class="p_desc">
-                        description
+                        <span style="color: #fdfd01">Описание</span>
                         <br><br>
-                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                        Сайт на Django для создания индивидуальных или совместных целей с друзьями,
+                        отслеживания прогресса по накоплениям.<br>
+                        Редактирование профиля, создание целей,
+                        добавление друзей, пополнение целей через телеграм бота.
                     </div>
-                    <div class="p_other">features</div>
+                    <div class="p_other">
+                        <span style="color: #fdfd01">Технологии</span><br><br>
+                        <ul>
+                            <li>Django</li>
+                            <li>SQLite</li>
+                            <li>command for manage.py</li>
+                            <li>Swagger</li>
+                        </ul>
+                        <br>Позже:
+                        <ul>
+                            <li>DRF</li>
+                            <li>Docker</li>
+                            <li>PostgreSQL</li>
+                            <li>Unit tests</li>
+                        </ul>
+                        <br>
+                        <a href="https://github.com/AwesomeDreamis/purposes_keeper"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">purposes_keeper</a>
+                    </div>
                 </div>
             </details>
 
             <details open class="project_one">
                 <summary class="project_title">Боты</summary>
-                <div class="project_content" >
+                <div class="project_content" style="border-bottom: 2px solid #424242;">
                     <div class="p_img">
-                        <b>Телеграмм бот для копилки "PurposesKeeper"</b>
+                        <b>Телеграмм-бот для сайта-копилки</b>
                         <br><br>
                         {% include 'img_carousels/img_carousel_goals_bot.html' %}
                     </div>
                     <div class="p_desc">
-                        description
+                        <span style="color: #fdfd01">Описание</span>
                         <br><br>
-                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                        Телеграмм-бот для сайта-копилки.
+                        Кнопки, машина состояний,
                     </div>
-                    <div class="p_other">features</div>
+                    <div class="p_other">
+                        <span style="color: #fdfd01">Технологии</span><br><br>
+                        <ul>
+                            <li>aiogram</li>
+                        </ul>
+                        <br>Позже:
+                        <ul>
+                            <li>Автономизация бота</li>
+                            <li>Взаимодействие с сайтом через api</li>
+                            <li>Unit tests</li>
+                        </ul>
+                        <br>
+                        <a href="https://github.com/AwesomeDreamis/purposes_keeper/blob/main/app_main/management/commands/run_bot.py"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">purposeskeeper_bot</a>
+                    </div>
                 </div>
 
-                <div class="project_content" >
+                <div class="project_content" style="border-bottom: 2px solid #424242;">
                     <div class="p_img">
                         <b>Чат-бот VK для кондитерской витрины</b>
                         <br><br>
                         {% include 'img_carousels/img_carousel_vk_bot.html' %}
                     </div>
                     <div class="p_desc">
-                        description
+                        <span style="color: #fdfd01">Описание</span>
                         <br><br>
-                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                        Чат-бот VK для кондитерской витрины.<br>
+                        Кнопки, разделы, картинки.
                     </div>
-                    <div class="p_other">features</div>
+                    <div class="p_other">
+                        <span style="color: #fdfd01">Технологии</span><br><br>
+                        <ul>
+                            <li>VkApi</li>
+                            <li>SQLite</li>
+                        </ul>
+                        <br>
+                        <a href="https://github.com/AwesomeDreamis/VK_bakery_bot"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">Vk_bakery_bot</a>
+                    </div>
                 </div>
 
-                <div class="project_content" >
+                <div class="project_content">
                     <div class="p_img">
-                        <b>Телеграм бот для поиска получения предложений о работе</b>
+                        <b>Телеграм-бот для получения предложений о работе</b>
                         <br><br>
                         {% include 'img_carousels/img_carousel_job_bot.html' %}
                     </div>
                     <div class="p_desc">
-                        description
+                        <span style="color: #fdfd01">Описание</span>
                         <br><br>
-                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                        Телеграм-бот для вашей регистрации как работодателя в моей базе данных
+                        и отправления мне информации о вакансии.
+                        Уведомление о регистрации приходит мне в чат.<br>
+                        Только текстовые команды.
                     </div>
-                    <div class="p_other">features</div>
+                    <div class="p_other">
+                        <span style="color: #fdfd01">Технологии</span><br><br>
+                        <ul>
+                            <li>Django</li>
+                            <li>manage.py commands</li>
+                            <li>aiogram</li>
+                            <li>SQLite</li>
+                        </ul>
+                        <br>
+                        <a href="https://github.com/AwesomeDreamis/MyOffersBot"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">MyOffersBot</a>
+                    </div>
                 </div>
             </details>
 
@@ -108,11 +187,21 @@
                         {% include 'img_carousels/img_carousel_anagram.html' %}
                     </div>
                     <div class="p_desc">
-                        description
+                        <span style="color: #fdfd01">Описание</span>
                         <br><br>
-                        <a href="#"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">github</a>
+                        Приложение для проверки пары слов на то,
+                        являются ли они анаграммами друг друга.
                     </div>
-                    <div class="p_other">features</div>
+                    <div class="p_other">
+                        <span style="color: #fdfd01">Технологии</span><br><br>
+                        <ul>
+                            <li>FastAPI</li>
+                            <li>Redis</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                        <br>
+                        <a href="https://github.com/AwesomeDreamis/Check_for_anagram"><img class="contacts_img" src="{% static 'contacts/github1.png' %}">Check_for_anagram</a>
+                    </div>
                 </div>
             </details>
 

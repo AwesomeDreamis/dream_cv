@@ -3,19 +3,31 @@
     color: #fdfd01;
     /*background-color: #36342d;*/
     background: repeating-linear-gradient(60deg, #3a3730, #3a3730 2px, #36342d 2px, #36342d 6px);
-    height: 98vh;
+    min-height: 98vh;
+    height: 1250px;
     width: 49%;
     font-size: 20px;
     padding: 20px;
     position: relative;
     vertical-align: middle;
+    text-align: center;
 
 }
 
+.skills_block_title {
+}
+
 .skills_content {
+    display: inline-block;
     margin-top: 30px;
     color: white;
     text-align: left;
-    margin-left: 10px;
+    max-width: 700px;
+    height: 100%;
     /*word-wrap: break-word;*/
+}
+
+
+.skills_content li{
+    margin-bottom: 20px;
 }

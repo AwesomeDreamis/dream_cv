@@ -2,6 +2,7 @@
     display: block;
     color: #fdfd01;
     background: repeating-linear-gradient(60deg, #3a3730, #3a3730 2px, #36342d 2px, #36342d 6px);
+    min-height: 98vh;
     height: 100%;
     width: 100%;
     font-size: 20px;
@@ -28,7 +29,7 @@
 }
 
 .project_content {
-    padding: 20px 0 10px 0;
+    padding: 20px 0 20px 0;
 }
 
 .p_img {
@@ -37,15 +38,23 @@
     vertical-align: top;
     color: #fdfd01;
     font-size: 22px;
+    padding-right: 20px;
 }
 
-.p_desc a {
+.p_other a {
     text-decoration: none;
     color: white;
+    /*margin-left: 15px;*/
 }
 
 .p_desc, .p_other {
     display: inline-block;
     width: 25%;
     vertical-align: top;
+    padding-right: 20px;
+}
+
+.p_other ul {
+    margin: 0;
+    padding-left: 20px;
 }

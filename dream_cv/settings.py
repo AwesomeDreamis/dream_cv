@@ -20,10 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*tct!$-l@sa@1_iw-buqdqlqkr+nc-&0n*l(rsz3_h+%xs(yq_'
+# SECRET_KEY = 'django-insecure-*tct!$-l@sa@1_iw-buqdqlqkr+nc-&0n*l(rsz3_h+%xs(yq_'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-*tct!$-l@sa@1_iw-buqdqlqkr+nc-&0n*l(rsz3_h+%xs(yq_')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = []
 
@@ -158,22 +160,22 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'debug.log',
-            'encoding': 'UTF-8',
-        },
-    },
-    'root': {
-        'handlers': ['file'],
-        'level': 'INFO',
-        'proragate': True,
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'file': {
+#             'class': 'logging.FileHandler',
+#             'filename': 'debug.log',
+#             'encoding': 'UTF-8',
+#         },
+#     },
+#     'root': {
+#         'handlers': ['file'],
+#         'level': 'INFO',
+#         'proragate': True,
+#     },
+# }
 
 INTERNAL_IPS = [  # если на хостинге, то нужен домен
     '127.0.0.1',
